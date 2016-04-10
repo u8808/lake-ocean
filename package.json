@@ -6,24 +6,26 @@
     "index": "./src/entry/index.jsx"
   },
   "dependencies": {
-    "antd": "0.12.x",
+    "antd": "^1.0.0-beta.0",
     "atool-build": "0.6.x",
     "babel-plugin-antd": "0.3.x",
+    "classnames": "^2.2.3",
     "es3ify-loader": "^0.1.0",
     "react": "0.14.x",
-    "react-dom": "0.14.x"
+    "react-dom": "0.14.x",
+    "react-router": "^2.0.1"
   },
   "devDependencies": {
+    "babel-eslint": "^6.0.0",
     "dora": "0.3.x",
-    "dora-plugin-webpack": "0.6.x",
     "dora-plugin-hmr": "0.5.x",
     "dora-plugin-livereload": "0.3.x",
     "dora-plugin-proxy": "0.6.x",
+    "dora-plugin-webpack": "0.6.x",
     "eslint": "2.x",
     "eslint-config-airbnb": "6.x",
     "eslint-plugin-react": "4.x",
-    "pre-commit": "1.x",
-    "babel-eslint": "^6.0.0"
+    "pre-commit": "1.x"
   },
   "pre-commit": [
     "lint"

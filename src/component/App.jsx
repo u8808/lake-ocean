@@ -1,10 +1,14 @@
-import React from 'react';
-import { DatePicker } from 'antd';
 import './App.less';
+import React from 'react';
+import Header from './Header';
+import Footer from './Footer'
 
-const App = () =>
-  <DatePicker />;
-
-
-export default App;
-
+export default function App(props) {
+  return (
+    <div className="app">
+      <Header {...props} />
+      { props.children }
+      <Footer {...props}/>
+    </div>
+  );
+}
