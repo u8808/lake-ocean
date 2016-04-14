@@ -10,11 +10,18 @@ class Category extends React.Component {
     this.displayName = 'Category';
   }
   render() {
+    const typeStyle = {
+      border: "solid 3px #" + this.props.color,
+      color: "#" + this.props.color,
+    };
     return <Row gutter={24} className="category">
       <Col xs={{ span: 6}} sm={{ span: 6}} md={{ span: 6}} lg={{ span: 6}}>
         <div className="type">
-          <div className="name">
-            {this.props.name}
+          <div className="name" style={typeStyle}>
+            <img className="ico" src={require('../../common/image/icon_categary.png')} alt=""/>
+            <p>
+              {this.props.name}
+            </p>
           </div>
         </div>
       </Col>

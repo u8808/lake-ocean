@@ -16,11 +16,11 @@ class Navigation extends React.Component {
         <Col xs={{ span: 16, offset: 4 }} sm={{ span: 16, offset: 4 }} md={{ span: 16, offset: 4 }} lg={{ span: 16, offset: 4 }}>
 
           <Row type="flex">
-            <Item route="about" name="关于海洋季" bgColor="339933" />
-            <Item route="activity" name="活动一览" bgColor="0066cc" />
-            <Item route="business" name="商业合作" bgColor="cc0066" />
-            <Item route="volunteer" name="志愿者之家" bgColor="003399" />
-            <Item route="news" name="新闻中心" bgColor="ff6600" />
+            <Item route="about" name="关于海洋季" bgColor="9C3" />
+            <Item route="activity" name="活动一览" bgColor="39C" />
+            <Item route="business" name="商业合作" bgColor="F06" />
+            <Item route="volunteer" name="志愿者之家" bgColor="06C" />
+            <Item route="news" name="新闻中心" bgColor="F90" />
           </Row>
 
         </Col>

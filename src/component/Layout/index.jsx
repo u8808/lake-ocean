@@ -19,21 +19,36 @@ class Layout extends React.Component {
       breadCrumbs[i] = <Breadcrumb.Item key={crumb} href={crumb}>{routes[i].breadcrumbName}</Breadcrumb.Item>;
     }
 
-    return <div className="layout">
+    const haveLogin = (
       <Row>
-        <Col xs={{ span: 4}} sm={{ span: 4}} md={{ span: 4}} lg={{ span: 4}}>
-          <div className="login">
-            <Login />
-          </div>
-        </Col>
+      <Col xs={{ span: 4}} sm={{ span: 4}} md={{ span: 4}} lg={{ span: 4}}>
+        <div className="login">
+          <Login />
+        </div>
+      </Col>
 
-        <Col xs={{ span: 16}} sm={{ span: 16}} md={{ span: 16}} lg={{ span: 16}}>
+      <Col xs={{ span: 16}} sm={{ span: 16}} md={{ span: 16}} lg={{ span: 16}}>
+        <Breadcrumb separator=">">
+          {breadCrumbs}
+        </Breadcrumb>
+        { this.props.children }
+      </Col>
+    </Row>
+    );
+
+    const notHaveLogin = (
+      <Row>
+        <Col xs={{ span: 16, offset: 4}} sm={{ span: 16, offset: 4}} md={{ span: 16, offset: 4}} lg={{ span: 16, offset: 4}}>
           <Breadcrumb separator=">">
             {breadCrumbs}
           </Breadcrumb>
           { this.props.children }
         </Col>
       </Row>
+    );
+
+    return <div className="layout">
+      { !!this.props.login ? haveLogin : notHaveLogin}
     </div>;
   }
 }

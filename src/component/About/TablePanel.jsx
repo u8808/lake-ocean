@@ -19,7 +19,7 @@ class TablePanel extends React.Component {
       dataIndex: 'name'
     }, {
       title: '时间',
-      dataIndex: 'date'
+      dataIndex: 'time'
     }, {
       title: '地点',
       dataIndex: 'address'

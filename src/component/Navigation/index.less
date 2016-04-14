@@ -3,14 +3,17 @@
 .navigation {
   height: 480px;
   //background: url("../../common/image/index.jpg") no-repeat center / cover;
-}
 
-.navigation .item {
-  display: block;
-  width: 20%;
-  height: @item-hight;
-  line-height: @item-hight;
-  font-size: 1.5em;
-  color: #fefefe;
-  text-align: center;
+  .item {
+    display: block;
+    width: 20%;
+    height: @item-hight;
+    line-height: @item-hight;
+    font-size: 1.5em;
+    color: #fefefe;
+    text-align: center;
+  }
+  .item:hover {
+    border: solid #fcfcfc 1px;
+  }
 }

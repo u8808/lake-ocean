@@ -14,7 +14,7 @@ class Business extends React.Component {
     return <div className="business">
       <Navigation backImage = {require('../../common/image/business.jpg')} />
       <Layout {...this.props} login={true}>
-        <Content />
+        <Content {...this.props} />
       </Layout>
     </div>;
   }

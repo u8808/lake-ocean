@@ -23,12 +23,22 @@ class Header extends React.Component {
         <Col xs={{ span: 8 }} sm={{ span: 8 }} md={{ span: 8 }} lg={{ span: 8 }}>
           <div className="share">
             <ul>
-              <li><i className="icon iconfont">&#xe602;</i></li>
-              <li><i className="icon iconfont">&#xe603;</i></li>
-              <li><i className="icon iconfont">&#xe600;</i></li>
-              <li><i className="icon iconfont">&#xe601;</i></li>
-              <li><i className="icon iconfont">&#xe604;</i></li>
-              <li style={{fontSize: 1.125}}>分享至:</li>
+              <li>
+                <a href=""><img src={require('../../common/image/share_05.png')} width="24" alt=""/></a>
+              </li>
+              <li>
+                <a href=""><img src={require('../../common/image/share_04.png')} width="24" alt=""/></a>
+              </li>
+              <li>
+                <a href=""><img src={require('../../common/image/share_03.png')} width="24" alt=""/></a>
+              </li>
+              <li>
+                <a href=""><img src={require('../../common/image/share_02.png')} width="24" alt=""/></a>
+              </li>
+              <li>
+                <a href=""><img src={require('../../common/image/share_01.png')} width="24" alt=""/></a>
+              </li>
+              <li>分享至:</li>
             </ul>
           </div>
         </Col>

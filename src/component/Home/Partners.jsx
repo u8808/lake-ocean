@@ -10,7 +10,7 @@ export default class Partners extends React.Component {
         <Col xs={{ span: 16, offset: 4}} sm={{ span: 16, offset: 4}} md={{ span: 16, offset: 4}} lg={{ span: 16, offset: 4}}>
           <Row type="flex" align="middle">
             <Col xs={{ span: 24}} sm={{ span: 24}} md={{ span: 24}} lg={{ span: 24}}>
-              <div style={{textAlign: "center", fontSize: '2em', marginBottom: 20}}>合 作 伙 伴</div>
+              <div className="title">合 作 伙 伴</div>
             </Col>
 
             <Col xs={{ span: 12}} sm={{ span: 8}} md={{ span: 6}} lg={{ span: 4}}>

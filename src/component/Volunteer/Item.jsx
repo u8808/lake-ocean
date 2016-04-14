@@ -19,7 +19,10 @@ class Item extends React.Component {
           <Col xs={{ span: 21}} sm={{ span: 21}} md={{ span: 21}} lg={{ span: 21}}>
             <div className="itemContent">
               <div className="title">
-                <h3>永远的皇后</h3>
+                <h3>
+                  永远的皇后
+                  <span style={{float:"right", fontWeight:"normal", fontSize: "small"}}>2016-03-24 18:35:20</span>
+                </h3>
               </div>
               <div className="body">
                 <p>周末去滴水湖玩了，空气比市区好多了！</p>

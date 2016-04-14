@@ -1,5 +1,4 @@
 import './index.less'
-import '../Header/index.less'
 import React from 'react';
 import { Form, Input, Button, Checkbox, Modal } from 'antd';
 import Register from './register'
@@ -40,12 +39,12 @@ class Login extends React.Component {
         <Button type="primary" htmlType="submit" style={{width: "100%", backgroundColor: "#cc0066", border: "none"}}>登录</Button>
       </Form>
 
-      <div className="others">
+      <div className="otherWays">
         可以使用以下方式登陆:
         <p className="logo">
-          <i className="icon iconfont">&#xe604;</i>
-          <i className="icon iconfont">&#xe602;</i>
-          <i className="icon iconfont">&#xe600;</i>
+          <a href=""><img src={require('../../common/image/share_01.png')} width="24" alt=""/></a>
+          <a href=""><img src={require('../../common/image/share_03.png')} width="24" alt=""/></a>
+          <a href=""><img src={require('../../common/image/share_05.png')} width="24" alt=""/></a>
         </p>
       </div>
 

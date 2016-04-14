@@ -16,28 +16,22 @@ export default class Hot extends React.Component {
 
         <Col xs={{ span: 16}} sm={{ span: 16}} md={{ span: 16}} lg={{ span: 16}}>
           <Row gutter={16}>
-            <Col xs={{ span: 16}} sm={{ span: 16}} md={{ span: 16}} lg={{ span: 16}}>
+
+            <Col xs={{ span: 6}} sm={{ span: 6}} md={{ span: 6}} lg={{ span: 6}}>
               <div className="item">
-                热点
+                <img width="100%" src={require('../../common/image/index_hot_01.jpg')} alt=""/>
+              </div>
+
+              <div className="item">
+                <img width="100%" src={require('../../common/image/index_hot_02.png')} alt=""/>
               </div>
             </Col>
-            
-            <Col xs={{ span: 8}} sm={{ span: 8}} md={{ span: 8}} lg={{ span: 8}}>
-              <div className="item">热点</div>
-            </Col>
 
-            <Col xs={{ span: 8}} sm={{ span: 8}} md={{ span: 8}} lg={{ span: 8}}>
-              <div className="item">热点</div>
+            <Col xs={{ span: 18}} sm={{ span: 18}} md={{ span: 18}} lg={{ span: 18}}>
+              <div className="item">
+                <img width="100%" src={require('../../common/image/index_hot_detail.jpg')} alt=""/>
+              </div>
             </Col>
-
-            <Col xs={{ span: 8}} sm={{ span: 8}} md={{ span: 8}} lg={{ span: 8}}>
-              <div className="item">热点</div>
-            </Col>
-
-            <Col xs={{ span: 8}} sm={{ span: 8}} md={{ span: 8}} lg={{ span: 8}}>
-              <div className="item">热点</div>
-            </Col>
-
 
           </Row>
         </Col>
