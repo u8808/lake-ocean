@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Form, Input, Radio } from 'antd';
+import { Button, Form, Input, Radio, Modal } from 'antd';
 const createForm = Form.create;
 const FormItem = Form.Item;
 const RadioGroup = Radio.Group;
@@ -12,10 +12,12 @@ class Register extends React.Component {
   constructor(props) {
     super(props);
     this.displayName = "Register";
-    this.handleReset = this.handleReset.bind(this);
+    this.state = {
+      modalVisible: false
+    };
+    this.showModal = this.showModal.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.handleReset = this.handleReset.bind(this);
-    this.handleReset = this.handleReset.bind(this);
+    this.handleCancel = this.handleCancel.bind(this);
   }
 
   getValidateStatus(field) {
@@ -30,9 +32,18 @@ class Register extends React.Component {
     }
   }
 
-  handleReset(e) {
-    e.preventDefault();
-    this.props.form.resetFields();
+
+  showModal() {
+    this.setState({
+      modalVisible: true
+    });
+  }
+
+  handleCancel(e) {
+    console.log(e);
+    this.setState({
+      modalVisible: false
+    });
   }
 
   handleSubmit(e) {
@@ -44,6 +55,9 @@ class Register extends React.Component {
       }
       console.log('Submit!!!');
       console.log(values);
+      this.setState({
+        modalVisible: false
+      });
     });
   }
 
@@ -114,73 +128,70 @@ class Register extends React.Component {
         validator: this.checkPass2,
       }],
     });
-    const textareaProps = getFieldProps('textarea', {
-      rules: [
-        { required: true, message: '真的不打算写点什么吗？' },
-      ],
-    });
     const formItemLayout = {
       labelCol: { span: 7 },
       wrapperCol: { span: 12 },
     };
     return (
-      <Form horizontal form={this.props.form}>
-        <FormItem
-          {...formItemLayout}
-          label="用户名："
-          hasFeedback
-          help={isFieldValidating('name') ? '校验中...' : (getFieldError('name') || []).join(', ')}>
-          <Input {...nameProps} placeholder="用户名" />
-        </FormItem>
+      <p className="ant-form-text">
+        <a onClick={this.showModal} style={{color: "red"}}>快速注册</a>
+        <Modal title="快速注册" visible={this.state.modalVisible}
+               onOk={this.handleOk} onCancel={this.handleCancel}>
 
-        <FormItem
-          {...formItemLayout}
-          label="账户类型："
-          hasFeedback >
-          <RadioGroup defaultValue="0">
-            <Radio value="0">个人</Radio>
-            <Radio value="1">企业</Radio>
-          </RadioGroup>
-        </FormItem>
+          <Form horizontal form={this.props.form}>
+            <FormItem
+              {...formItemLayout}
+              label="用户名："
+              hasFeedback
+              help={isFieldValidating('name') ? '校验中...' : (getFieldError('name') || []).join(', ')}>
+              <Input {...nameProps} placeholder="用户名" />
+            </FormItem>
 
-        <FormItem
-          {...formItemLayout}
-          label="密码："
-          hasFeedback>
-          <Input {...passwdProps} type="password" autoComplete="off"
-                                  onContextMenu={noop} onPaste={noop} onCopy={noop} onCut={noop} />
-        </FormItem>
+            <FormItem
+              {...formItemLayout}
+              label="账户类型："
+              hasFeedback >
+              <RadioGroup defaultValue="0">
+                <Radio value="0">个人</Radio>
+                <Radio value="1">企业</Radio>
+              </RadioGroup>
+            </FormItem>
 
-        <FormItem
-          {...formItemLayout}
-          label="确认密码："
-          hasFeedback>
-          <Input {...rePasswdProps} type="password" autoComplete="off" placeholder="两次输入密码保持一致"
-                                    onContextMenu={noop} onPaste={noop} onCopy={noop} onCut={noop} />
-        </FormItem>
+            <FormItem
+              {...formItemLayout}
+              label="密码："
+              hasFeedback>
+              <Input {...passwdProps} type="password" autoComplete="off"
+                                      onContextMenu={noop} onPaste={noop} onCopy={noop} onCut={noop} />
+            </FormItem>
 
-        <FormItem
-          {...formItemLayout}
-          label="手机："
-          hasFeedback>
-          <Input placeholder="手机号码" />
-        </FormItem>
+            <FormItem
+              {...formItemLayout}
+              label="确认密码："
+              hasFeedback>
+              <Input {...rePasswdProps} type="password" autoComplete="off" placeholder="两次输入密码保持一致"
+                                        onContextMenu={noop} onPaste={noop} onCopy={noop} onCut={noop} />
+            </FormItem>
 
-        <FormItem
-          {...formItemLayout}
-          label="邮箱："
-          hasFeedback>
-          <Input {...emailProps} type="email" placeholder="电子邮箱" />
-        </FormItem>
+            <FormItem
+              {...formItemLayout}
+              label="手机："
+              required
+              hasFeedback>
+              <Input placeholder="手机号码" />
+            </FormItem>
 
+            <FormItem
+              {...formItemLayout}
+              label="邮箱："
+              hasFeedback>
+              <Input {...emailProps} type="email" placeholder="电子邮箱" />
+            </FormItem>
 
-        <FormItem wrapperCol={{ span: 12, offset: 7 }}>
-          <Button type="primary" onClick={this.handleSubmit}>确定</Button>
-          &nbsp;&nbsp;&nbsp;
-          <Button type="ghost" onClick={this.handleReset}>重置</Button>
+          </Form>
 
-        </FormItem>
-      </Form>
+        </Modal>
+      </p>
     );
   }
 }

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Col } from 'antd';
+import { Link } from 'react-router';
+
 
 class Item extends React.Component {
   constructor(props) {
@@ -12,11 +14,11 @@ class Item extends React.Component {
       backgroundColor: "#"+this.props.bgColor
     };
 
-    return <Col xs={{ span: 4}} sm={{ span: 4}} md={{ span: 4}} lg={{ span: 4}}>
-      <a className="item" style={itemStyle}>
+    return (
+      <Link className="item" style={itemStyle} to={this.props.route}>
         {this.props.name}
-      </a>
-    </Col>;
+      </Link>
+    );
   }
 }
 
