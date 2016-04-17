@@ -8,6 +8,12 @@ class Header extends React.Component {
     super(props);
     this.displayName = 'Header';
   }
+
+  handleShare(shareType) {
+      // for share Event
+      console.log(shareType)
+  }
+
   render() {
     return <header className="header">
       <Row type="flex" justify="start" align="middle">
@@ -16,7 +22,7 @@ class Header extends React.Component {
             <ul>
               <li>繁</li>
               <li>EN</li>
-              <li style={{paddingTop: 11}}><SearchInput style={{width: 200}} /></li>
+              <li><SearchInput style={{width: 200}} /></li>
             </ul>
           </div>
         </Col>
@@ -24,19 +30,19 @@ class Header extends React.Component {
           <div className="share">
             <ul>
               <li>
-                <a href=""><img src={require('../../common/image/share_05.png')} width="24" alt=""/></a>
+                <img src={require('../../common/image/share_05.png')} width="24" alt="" onClick={this.handleShare.bind(this, 0)}/>
               </li>
               <li>
-                <a href=""><img src={require('../../common/image/share_04.png')} width="24" alt=""/></a>
+                <img src={require('../../common/image/share_04.png')} width="24" alt=""/>
               </li>
               <li>
-                <a href=""><img src={require('../../common/image/share_03.png')} width="24" alt=""/></a>
+                <img src={require('../../common/image/share_03.png')} width="24" alt=""/>
               </li>
               <li>
-                <a href=""><img src={require('../../common/image/share_02.png')} width="24" alt=""/></a>
+                <img src={require('../../common/image/share_02.png')} width="24" alt=""/>
               </li>
               <li>
-                <a href=""><img src={require('../../common/image/share_01.png')} width="24" alt=""/></a>
+                <img src={require('../../common/image/share_01.png')} width="24" alt=""/>
               </li>
               <li>分享至:</li>
             </ul>

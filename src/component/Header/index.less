@@ -1,7 +1,12 @@
-@header-height: 50px;
+@header-height: 32px;
 
 .header {
   background-color: #fff;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+  min-width: 900px;
   height: @header-height;
   ul {
    list-style-type:none;
@@ -13,14 +18,20 @@
    display: inline-block;
    line-height: @header-height;
    padding-left: 10px;
+
+   .header--search-style{
+    margin-top: 2px;
+    height: 28px;
+}
  }
  .share ul li {
    float: right;
    line-height: @header-height;
    padding-right: 15px;
    font-size: 1.125em;
-   img{
-     padding-top: 12px;
+   img {
+       display: block;
+       margin-top: 4px;
    }
  }
 }
