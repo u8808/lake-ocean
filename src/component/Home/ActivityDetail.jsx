@@ -10,44 +10,44 @@ export default class ActivityDetail extends React.Component {
         <Col xs={{ span: 16, offset: 4}} sm={{ span: 16, offset: 4}} md={{ span: 16, offset: 4}} lg={{ span: 16, offset: 4}}>
           <Row gutter={16}>
             <Col xs={{ span: 8}} sm={{ span: 8}} md={{ span: 8}} lg={{ span: 8}}>
-              <div className="item" style={{backgroundColor: "#FA0D1B"}}>
-                <img width="100%" src={require('../../common/image/index_activity_01.png')} />
-                <div className="title">庆典</div>
+              <div className="item" color={{backgroundColor: "#FA0D1B"}}>
+                <img width="100%" src={require('../../common/image/index_activity_01.jpg')} />
+                <div className="title"><p>庆典</p></div>
               </div>
             </Col>
 
             <Col xs={{ span: 8}} sm={{ span: 8}} md={{ span: 8}} lg={{ span: 8}}>
-              <div className="item" style={{backgroundColor: "#C8996A"}}>
-                <img width="100%" src={require('../../common/image/index_activity_02.png')} />
-                <div className="title">会议</div>
+              <div className="item" color={{backgroundColor: "#C8996A"}}>
+                <img width="100%" src={require('../../common/image/index_activity_02.jpg')} />
+                <div className="title"><p>会议</p></div>
               </div>
             </Col>
 
             <Col xs={{ span: 8}} sm={{ span: 8}} md={{ span: 8}} lg={{ span: 8}}>
-              <div className="item" style={{backgroundColor: "#2073CE"}}>
-                <img width="100%" src={require('../../common/image/index_activity_03.png')} />
-                <div className="title">展览</div>
+              <div className="item" color={{backgroundColor: "#2073CE"}}>
+                <img width="100%" src={require('../../common/image/index_activity_03.jpg')} />
+                <div className="title"><p>展览</p></div>
               </div>
             </Col>
 
             <Col xs={{ span: 8}} sm={{ span: 8}} md={{ span: 8}} lg={{ span: 8}}>
-              <div className="item" style={{backgroundColor: "#FC9827"}}>
-                <img width="100%" src={require('../../common/image/index_activity_04.png')} />
-                <div className="title">科普</div>
+              <div className="item" color={{backgroundColor: "#FC9827"}}>
+                <img width="100%" src={require('../../common/image/index_activity_04.jpg')} />
+                <div className="title"><p>科普</p></div>
               </div>
             </Col>
 
             <Col xs={{ span: 8}} sm={{ span: 8}} md={{ span: 8}} lg={{ span: 8}}>
-              <div className="item" style={{backgroundColor: "#CA0F66"}}>
-                <img width="100%" src={require('../../common/image/index_activity_05.png')} />
-                <div className="title">竞赛</div>
+              <div className="item" color={{backgroundColor: "#CA0F66"}}>
+                <img width="100%" src={require('../../common/image/index_activity_05.jpg')} />
+                <div className="title"><p>竞赛</p></div>
               </div>
             </Col>
 
             <Col xs={{ span: 8}} sm={{ span: 8}} md={{ span: 8}} lg={{ span: 8}}>
-              <div className="item" style={{backgroundColor: "#98C941"}}>
-                <img width="100%" src={require('../../common/image/index_activity_06.png')} />
-                <div className="title">娱乐</div>
+              <div className="item" color={{backgroundColor: "#98C941"}}>
+                <img width="100%" src={require('../../common/image/index_activity_06.jpg')} />
+                <div className="title"><p>娱乐</p></div>
               </div>
             </Col>
 

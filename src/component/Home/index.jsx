@@ -2,10 +2,7 @@ import './index.less';
 import React from 'react';
 import scrollAnim from 'rc-scroll-anim';
 
-import Navigation from '../Navigation';
 import Hot from './Hot';
-import About from './About';
-import AboutDetail from './AboutDetail';
 import Activity from './Activity';
 import ActivityDetail from './ActivityDetail';
 import Others from './Others';
@@ -27,33 +24,20 @@ class Home extends React.Component {
 
   render() {
     return <div className="home">
-        <Element scrollName="page0">
-            <Navigation backImage = {require('../../common/image/index.jpg')} />
-        </Element>
-        <Element scrollName="page1">
-            <Hot />
-        </Element>
-        <Element scrollName="page2">
-            <About />
-        </Element>
-        <Element scrollName="page3">
-            <AboutDetail />
-        </Element>
-        <Element scrollName="page4">
-            <Activity />
-        </Element>
-        <Element scrollName="page5">
-            <ActivityDetail />
-        </Element>
-        <Element scrollName="page6">
-            <Others />
-        </Element>
-        <Element scrollName="page7">
-            <Partners />
-        </Element>
-        <Element scrollName="page8">
-            <Footer />
-        </Element>
+      <Element scrollName="page0">
+        <Hot />
+      </Element>
+      <Element scrollName="page1">
+        <Activity />
+        <ActivityDetail />
+      </Element>
+      <Element scrollName="page2">
+        <Others />
+        <Partners />
+      </Element>
+      <Element scrollName="page3">
+        <Footer />
+      </Element>
     </div>;
   }
 }
