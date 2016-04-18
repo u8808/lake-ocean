@@ -11,11 +11,11 @@
     "babel-plugin-antd": "0.3.x",
     "classnames": "^2.2.3",
     "es3ify-loader": "^0.1.0",
+    "rc-scroll-anim": "^0.2.6",
     "react": "0.14.x",
     "react-dom": "0.14.x",
     "react-route": "^1.0.3",
-    "react-router": "^2.0.1",
-    "rc-scroll-anim": "^0.2.6"
+    "react-router": "^2.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^6.0.0",
